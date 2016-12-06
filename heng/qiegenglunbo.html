@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d轮播横</title>
+    <link rel="stylesheet" href="css/less.css">
+    <style>
+        .boxs{
+            width:900px;
+            height:500px;
+            position:fixed;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+            perspective:10000px;
+            perspective-origin:bottom;
+            /*border:1px solid pink;*/
+        }
+    </style>
+</head>
+<body style="background: rgba(175,139,250,0.5)">
+<div class="boxs">
+
+</div>
+</body>
+<script>
+    var boxs=document.querySelector(".boxs");
+    var heights=parseInt(getComputedStyle(boxs,null).height);
+    var widths=parseInt(getComputedStyle(boxs,null).width);
+    var nums=15;
+    var arr=[];
+    for(var i=0;i<nums;i++){
+        var sence=document.createElement("div");
+        sence.style.cssText="width:100%;height:"+heights/nums+"px;position:absolute;left:0;top:"+(i*(heights/nums))+"px;";
+        var box=document.createElement("div");
+        box.style.cssText="width:100%;height:100%;position:absolute;left:0;top:0;transform-style:preserve-3d;transform-origin:center center 450px;transition:2s ease "+(i*0.23)+"s;";
+        for(j=0;j<6;j++){
+            var panel=document.createElement("div");
+            panel.style.cssText="position:absolute;left:0;top:0;border-bottom:1px solid #ccc;";
+            if(j==0){
+                panel.style.width=+widths+"px";
+                panel.style.height=+widths+"px";
+                panel.style.transformOrigin="top";
+                panel.style.transform="rotateX(90deg)";
+                panel.style.background="pink";
+            }else if(j==1){
+                panel.style.width="100%";
+                panel.style.height=""+heights/nums+"px";
+                panel.style.transformOrigin="left";
+                panel.style.transform="rotateY(-90deg)";
+                panel.style.background="url(img/1.jpg) no-repeat  0  "+(-i*(heights/nums))+"px";
+            }
+            else if(j==2){
+                panel.style.width="100%";
+                panel.style.height=""+heights/nums+"px";
+                panel.style.background="url(img/2.jpg) no-repeat  0  "+(-i*(heights/nums))+"px";
+                panel.style.transform="rotateY(180deg)";
+            }
+            else if(j==3){
+                panel.style.width="100%";
+                panel.style.height=""+heights/nums+"px";
+                panel.style.transformOrigin="right";
+                panel.style.transform="rotateY(90deg)";
+                panel.style.background="url(img/3.jpg) no-repeat  0  "+(-i*(heights/nums))+"px";
+            }
+            else if(j==4){
+                panel.style.width=+widths+"px";
+                panel.style.height=+widths+"px";
+                panel.style.transformOrigin="bottom";
+                panel.style.transform="rotateX(-90deg)";
+                panel.style.top=-(widths-heights/nums)+"px";
+                panel.style.background="black";
+            }
+            else if(j==5){
+                panel.style.width=+widths+"px";
+                panel.style.height=""+heights/nums+"px";
+                panel.style.transform="translateZ(900px)";
+                panel.style.background="url(img/4.jpg) no-repeat  0  "+(-i*(heights/nums))+"px";
+            }
+            box.appendChild(panel);
+        }
+        sence.appendChild(box);
+        boxs.appendChild(sence);
+        arr.push(box);
+
+    }
+   var init=0;
+        init+=90;
+   
+    // function move(){
+        for(var i=0;i<arr.length;i++){
+             arr[i].style.transform="rotateY("+init+"deg)";
+             if(i<8){
+                arr[i].style.animation="one "+i*0.8+"s  ease-in  forwards";
+            }else{
+                arr[i].style.animation="one "+(12-i*0.8)+"s  ease-in forwards";
+            }
+        }
+    // }
+    // var t=setInterval(move,3000);
+    // window.onfocus=function(){
+    //     t=setInterval(move,3000);
+    // }
+    // window.onblur=function(){
+    //     clearInterval(t);
+    // }
+     // var cx=document.documentElement.clientWidth/2;
+     //   var cy=document.documentElement.clientHeight/2;
+     //   // var box=document.getElementsByClassName("box")[0];
+     //   document.onmousedown=function (e) {
+     //       var startx=e.clientX;
+     //       var starty=e.clientY;
+     //       document.onmousemove=function (e) {
+     //           var movex=e.clientX;
+     //           var movey=e.clientY;
+     //           var xx=movex-cx;
+     //           var yy=movey-cy;
+     //           var mo=Math.sqrt(Math.pow(xx,2)+Math.pow(yy,2));
+     //           var mox=xx/mo;
+     //           var moy=yy/mo;
+     //           var angle=Math.sqrt(Math.pow(movex-startx,2)+Math.pow(movey-starty,2));
+     //          box.style.transform="rotate3d("+-moy+","+mox+",0,"+angle+"deg)";
+     //       }
+    
+    
+     //       document.onmouseup=function () {
+     //           document.onmouseup=null;
+     //           document.onmousemove=null;
+     //       }
+     //   }
+
+
+</script>
+</html>
