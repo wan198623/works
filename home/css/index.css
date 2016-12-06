@@ -1,0 +1,188 @@
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.scene{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    perspective:800px;
+}
+.scene .room{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    transform-style:preserve-3d;
+}
+.scene .room .panel{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.room .panel:nth-child(1){
+    transform-origin:top;
+    transform:rotateX(90deg);
+    background:url(../img/thb.jpg) no-repeat;
+    background-size:100% 100%;
+
+}
+.room .panel:nth-child(2){
+    background:url(../img/qiang.jpg) no-repeat;
+    background-size:100% 100%;
+    transform-origin:left;
+    transform:rotateY(-90deg);
+}
+.room .panel:nth-child(3){
+    background:url(../img/3.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.room .panel:nth-child(4){
+     background:url(../img/qiang.jpg) no-repeat;
+    background-size:100% 100%;
+
+    transform-origin:right;
+    transform:rotateY(90deg);
+}
+.room .panel:nth-child(5){
+    background: blue;
+    transform-origin:bottom;
+    transform:rotateX(-90deg);
+    background:url(../img/db.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.room .panel:nth-child(6){
+     background:url(../img/ch.png) no-repeat;
+    background-size:100% 100%;
+    transform:translateZ(-500px);
+}
+.left{
+     width: 100%;
+    height: 20%;
+    position: absolute;
+    left:0;
+    top:20%;
+}
+.right{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    left:0;
+    top:40%;
+}
+.left div,.right div{
+    width: 10%;
+    float: left;
+    height: 100%;
+    margin-left:5%;
+    margin-right:5%;
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top:0;*/
+    box-sizing:border-box;
+    border-image:url(../img/xk.png)  18/5px 18 18 18/10px;
+-moz-border-image:url(../img/xk.png)  18/5px 18 18 18/10px; /* 老的 Firefox */
+-webkit-border-image:url(../img/xk.png)  18/5px 18 18 18/10px; /* Safari 和 Chrome */
+-o-border-image:url(../img/xk.png)  18/5px 18 18 18/10px; /* Opera */
+}
+.right div:nth-child(1){
+    position: absolute;
+    right:2%;
+    bottom:-20%; 
+}
+.right div:nth-child(2){
+    position: absolute;
+    right:20%;
+    top:-80%; 
+}
+.right div:nth-child(3){
+    position: absolute;
+    right:38%;
+    top:-90%; 
+}
+.right div:nth-child(4){
+    position: absolute;
+    right:56%;
+    bottom:-40%; 
+}
+.right div:nth-child(5){
+    position: absolute;
+    right:80%;
+    bottom:-70%; 
+}
+.room .left div:nth-child(1){
+     background:url(../img/a.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.room  .left div:nth-child(2){
+     background:url(../img/b.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.room  .left div:nth-child(3){
+     background:url(../img/c.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.room  .left div:nth-child(4){
+     background:url(../img/d.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.room  .left div:nth-child(5){
+     background:url(../img/e.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.right div:nth-child(1){
+    background:url(../img/f.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.right  div:nth-child(2){
+    background:url(../img/g.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.right  div:nth-child(3){
+    background:url(../img/h.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.right  div:nth-child(4){
+    background:url(../img/i.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.right  div:nth-child(5){
+    background:url(../img/j.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.left_bottom{
+    width: 80%;
+    height: 40%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -22px;
+    transform: translateZ(100px);
+    /*background: red;*/
+}
+.deng{
+    width: 20%;
+    height:20%;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    /*transform: rotateZ(90deg);*/
+
+}
+.jia{
+   width: 40%;
+   height: 55%;
+   position: absolute;
+   right:20%;
+   bottom:-5%;
+   /*transform:translateZ(400px);*/
+}
