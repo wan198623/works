@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>粒子动画</title>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            overflow: hidden;
+        }
+        canvas{
+            background:#000;
+        }
+
+    </style>
+    <script>
+        window.onload=function(){
+            var x=document.documentElement.clientWidth;
+            var y=document.documentElement.clientHeight;
+            var canvas=document.querySelector("canvas");
+            canvas.width=x;
+            canvas.height=y;
+            var cobj=canvas.getContext("2d");
+            function arc(){
+                this.r=6+3*Math.random();
+                this.color="rgba("+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+",1)";
+                this.speedx=6*Math.random()-3;
+                this.speedy=-14;
+                this.zhongli=0.23;
+                this.speedr=0.05;
+                this.x=200;
+                this.y=400;
+            }
+           arc.prototype={
+                draw:function(){
+                    cobj.save();
+                    cobj.beginPath();
+                    cobj.translate(this.x,this.y);
+
+                    cobj.fillStyle=this.color;
+
+                    cobj.arc(0,this.y,this.r,0,Math.PI*2);
+                    cobj.arc(200,this.y,this.r,0,Math.PI*2);
+                    cobj.arc(400,this.y,this.r,0,Math.PI*2);
+                    cobj.arc(600,this.y,this.r,0,Math.PI*2);
+                    cobj.arc(800,this.y,this.r,0,Math.PI*2);
+                    cobj.arc(1000,this.y,this.r,0,Math.PI*2);
+                    cobj.arc(1200,this.y,this.r,0,Math.PI*2);
+
+                    cobj.fill();
+                    cobj.restore();
+                },
+                update:function(){
+                    this.r-=this.speedr;
+                    this.x+=this.speedx;
+                    this.y+=this.speedy;
+                    this.speedy+=this.zhongli;
+                }
+            }
+            var arr=[];
+
+            setInterval(function(){
+                cobj.clearRect(0,0,x,y);
+                arr.push(new arc());
+                for(var i=0;i<arr.length;i++){
+                    arr[i].draw();
+                    arr[i].update();
+                    if(arr[i].r<0){
+                        arr[i]=new arc();
+                    }
+                    if(arr.length>1000){
+                        arr.shift();
+                    }
+                }
+
+            },50)
+
+        }
+    </script>
+</head>
+<body>
+<canvas></canvas>
+</body>
+</html>
