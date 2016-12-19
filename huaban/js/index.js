@@ -8,12 +8,12 @@ $(function(){
 	canvas.width=cx;
 	canvas.height=cy;
 	var drawObj=new shape(canvas,copy,cobj);
-	 $("body").mousedown(function(e){
-        e.preventDefault();  //阻止浏览器的默认行为
-    })
-    $("body").mousemove(function(e){
-        e.preventDefault();
-    })
+	 //$("body").mousedown(function(e){
+    //    e.preventDefault();  //阻止浏览器的默认行为
+    //})
+    //$("body").mousemove(function(e){
+    //    e.preventDefault();
+    //})
 	/*画图*/
 	$(".menu_left .menu_list:nth-child(2) .inner_list").click(function(){
 		  $(".xp").css({display:"none"});

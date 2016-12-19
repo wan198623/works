@@ -6,6 +6,84 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/iconfont.css">
     <script src="js/index.js"></script>
+    <style>
+        .clock{
+            width: 200px;
+            height: 200px;
+            border: 5px solid #ccc;
+            position: absolute;
+            border-radius: 50%;
+            position: absolute;
+            left:10%;
+            top:10%;
+            background: -webkit-linear-gradient(top, #fff, #ccc);
+            background: -moz-linear-gradient(top, #fff, #ccc);
+            background: -webkit-linear-gradient(to bottom, #fff, #ccc);
+            background: linear-gradient(to bottom, #fff, #ccc);
+            box-shadow: rgba(0, 0, 0, .8) .2em .2em 2em;
+            transform:rotateY(180deg);
+        }
+        .clock .item{
+            font-size:16px;
+            display: block;
+            width: 10px;
+            height:10px;
+            position: absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            margin: auto;
+            line-height:16px;
+            text-align: center;
+            font-weight: bold;
+            transform-origin:center 100px;
+        }
+        .clock .item:nth-child(1){
+            transform: translate(-2px,-80px);
+        }
+        .clock .item:nth-child(2){
+            transform: translate(80px,-2px);
+        }
+        .clock .item:nth-child(3){
+            transform: translate(-2px,75px);
+        }
+        .clock .item:nth-child(4){
+            transform: translate(-80px,-2px);
+        }
+        .clock:before{
+            content: '';
+            width:0.8em;
+            height:0.8em;
+            border-radius: .8em;
+            position: absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            margin: auto;
+            background: #CC0000;
+            z-index: 999;
+        }
+        .clock:after{
+            content: '';
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 2.2em;
+            position: absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            margin: auto;
+            border: .1em solid #c6c6c6;
+            border: .1em solid #c6c6c6;
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(200, 200, 200, 0), rgba(190, 190, 190, 1) 90%, rgba(130, 130, 130, 1) 100%);
+            background: -moz-radial-gradient(center, ellipse cover, rgba(200, 200, 200, 0), rgba(190, 190, 190, 1) 90%, rgba(130, 130, 130, 1) 100%);
+            background: -webkit-radial-gradient(ellipse at center, rgba(200, 200, 200, 0), rgba(190, 190, 190, 1) 90%, rgba(130, 130, 130, 1) 100%);
+            background: radial-gradient(ellipse at center, rgba(200, 200, 200, 0), rgba(190, 190, 190, 1) 90%, rgba(130, 130, 130, 1) 100%);
+        }
+    </style>
 </head>
 <body>
 <div class="scene">
@@ -18,6 +96,7 @@
                 <div></div>
                 <div></div>
                 <div></div>
+
             </div>
             <div class="left_bottom">
             
@@ -33,10 +112,57 @@
                 <div></div>
                 <div></div>
             </div>
+            <div class="clock">
+            <div class="item">12</div>
+            <div class="item">3</div>
+            <div class="item">6</div>
+            <div class="item">9</div>
+            </div>
         </div>
         <div class="panel panel5"></div>
         <div class="panel"></div>
     </div>
 </div>
 </body>
+<script>
+        var clock=document.querySelector(".clock");
+        var item=document.getElementsByClassName("item");
+        function creatMark(){
+            for(var i=0;i<60;i++){
+                var w,h;
+                if(i%5==0){
+                    w=4;h=8;
+                }else{
+                    w=2;h=6;
+                }
+                var div=document.createElement("div");
+                div.style.cssText="width:"+w+"px;height:"+h+"px;background:#7C7979;position:absolute;left:0;top:0;";
+                div.style.transform="translate("+(200-w)/2+"px,0) rotate("+i*6+"deg)";
+                div.style.transformOrigin="center 100px";
+                clock.appendChild(div);
+            }
+        }
+        creatMark();
+        function createPointer(w,h,c,a,b,r,z){
+            var div=document.createElement("div");
+            div.style.cssText="width:"+w+"px;height:"+h+"px;background:"+c+";position:absolute;left:0;top:0;box-shadow:"+b+";border-radius:"+r+";z-index:"+z+";"
+            div.style.transform="translate("+(200-w)/2+"px,"+(100-h)+"px) rotate("+a+"deg)";
+            div.style.transformOrigin="center bottom";
+            clock.appendChild(div);
+            div.w=w;
+            div.h=h;
+            return div;
+        }
+        var time=new Date();
+        var hpointer=createPointer(6,50,"#232425",time.getHours()*30+time.getMinutes()*6/12,"#232425 0 0 2px","10px 10px  0 0 ",999);
+        var mpointer=createPointer(5,70,"#232425",time.getMinutes()*6,"#343536 0 0 2px",".5em",999);
+        var spointer=createPointer(2,90,"#CC0000",time.getSeconds()*6,"rgba(0, 0, 0, .8) 0 0 .2em",".1em .1em 0 0/10em 10em 0 0",999);
+
+        setInterval(function(){
+            var time=new Date();
+            hpointer.style.transform="translate("+(200-hpointer.w)/2+"px,"+(100-hpointer.h)+"px) rotate("+(time.getHours()*30+time.getMinutes()*6/12)+"deg)";
+            mpointer.style.transform="translate("+(200-mpointer.w)/2+"px,"+(100-mpointer.h)+"px) rotate("+time.getMinutes ()*6+"deg)";
+            spointer.style.transform="translate("+(200-spointer.w)/2+"px,"+(100-spointer.h)+"px) rotate("+time.getSeconds ()*6+"deg)";
+        },1000)
+</script>
 </html>

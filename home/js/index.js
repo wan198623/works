@@ -51,7 +51,7 @@ var lastpanel=document.querySelector(".room .panel:nth-child(6)");
                     room.style.transform="translate3d(0,0,200px) rotate3d(0,1,0,"+angle1+"deg)";
                     flag=false;
                 }else{
-                    room.style.transform="translate3d(0,0,-500px) rotate3d(0,1,0,"+angle1+"deg)";
+                    room.style.transform="translate3d(0,0,-500px) rotate3d(0,1,0,"+(angle1)+"deg)";
                     flag=true;
                 }
 
