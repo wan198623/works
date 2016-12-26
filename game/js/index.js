@@ -11,9 +11,9 @@ $(function(){
     var runa=document.querySelector(".runa");
     var jifen=document.querySelector(".jifen")
     var zhi=document.querySelectorAll(".zhi");
-     var runa=document.querySelector(".runa")
-    var hita=document.querySelector(".hita")
-     var lif=document.querySelector(".pres")
+     var runa=document.querySelector(".runa");
+    var hita=document.querySelector(".hita");
+     var lif=document.querySelector(".pres");
     var start=$(".start");
     var mask=$(".mask");
     var hinders=document.querySelectorAll(".hinder");
