@@ -1,0 +1,157 @@
+*{
+    margin:0;padding:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;height:auto;
+    font-family:Helvetica;
+    font-size:0.5rem;
+    color:#333;
+}
+body{
+    background:#F9F9F9 ;
+}
+a{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    color:#333;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+header{
+    position: fixed;
+    left:0;
+    width: 100%;
+    height: 1.8rem;
+    background:#fff;
+    top:0;
+    border-bottom: 1px solid #ccc;
+    z-index: 999;
+    padding: 0.8rem 24px  0.2rem 24px;
+}
+footer{
+    position: fixed;
+    left:0;
+    width: 100%;
+    height: 1.8rem;
+    background:#fff;
+    border-top: 1px solid #ccc;
+    padding:0.2rem 0;
+    bottom: 0;
+}
+.iconfont{
+    font-family: 'myicon';
+}
+@font-face {
+    font-family: 'myicon';  /* project id："182487" */
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+footer .item{
+    width:20%;
+    height: 100%;
+    float: left;
+}
+footer .item span{
+    display: block;
+    width: 100%;
+    height:30%;
+    color:#929292;
+    float: left;
+    text-align: center;
+}
+footer .item .item_icon{
+    height:70%;
+    font-size: 0.3rem;
+    line-height:1.4rem;
+}
+footer .item .cc{
+    font-size:0.7rem;
+    line-height:1.2rem;
+}
+footer .item  .item_word{
+    font-size:0.3rem;
+}
+.icon-zhai:before{
+    content:"\e625";
+}
+.icon-channel:before{
+    content:"\e6a0";
+}
+.icon-wen:before{
+    content:"\e619";
+}
+.nav{
+    display: block;
+    height:0.8rem ;
+}
+.nav span{
+    font-size:0.4rem;
+    line-height: 0.8rem;
+    color:#4194E8;
+}
+.container{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:1.8rem;
+}
+
+.container .photo{
+    width: 100%;
+    height:1.8rem;
+    background: #fff;
+    border-bottom:1px solid #ccc;
+    padding:0.25rem 0.3rem;
+    position:relative;
+}
+.container .list_title{
+    display: block;
+    width: 100%;
+    height:1.2rem;
+    background: #fff;
+    border-bottom:1px solid #ccc;
+    padding:0.25rem 0.3rem;
+    position:relative;
+}
+.container .list_title span:nth-child(1){
+    color: #444;
+}
+.container .list_title span:nth-child(2),.container .list_title span:nth-child(3){
+    color:#B9B4B4;
+    font-size: 0.3rem;
+}
+.container .list_title span:nth-child(3){
+   float: right;
+}
+.container .list_title span:nth-child(2) {
+    display: inline-block;
+    position: absolute;
+   left: 0.3rem;
+    top:0.7rem;
+}
+.container .photo .circle{
+    width:1.15rem;
+    height:1.15rem;
+    border-radius:50%;
+    background: url(../img/shi.jpg) no-repeat;
+    background-size:cover;
+}
+.container .pope{
+    width:4rem;
+    position:absolute;
+    top:0.3rem;
+    left:1.7rem;
+    line-height:0.6rem;
+}
+footer  .mui-active span{
+    color:#4194E8;
+}
+

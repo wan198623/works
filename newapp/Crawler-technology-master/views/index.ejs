@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <ul>
+      <%for(var i=0;i<categorys.length;i++){%>
+        <li><a href="/list/<%=categorys[i].cid%>"><%=categorys[i].cname%></a></li>
+      <%}%>
+  </ul>
+</body>
+</html>

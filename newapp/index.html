@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引导页</title>  
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/yindao.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" >
+            <div class="mask">
+                    <p class="left ani"  swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">陪你走过红尘岁月</p>
+                    <p class="right ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">伴你看尽人世繁华</p>
+            </div>
+
+        </div>
+        <div class="swiper-slide" >
+            <div class="mask" >
+                    <p class="left ani"   swiper-animate-effect="fadeInDown"    swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">站在喧嚣之外</p>
+                    <p class="right ani"   swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">聆听时光的絮语</p>
+            </div>
+
+        </div>
+        <div class="swiper-slide" >
+        	<div class="mask">
+        		 <div class="mask1 ani"  swiper-animate-effect="zoomIn"    swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+            </div>
+            <div class="mask2 ani" swiper-animate-effect="zoomIn"    swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                <a href="login.html" >开始体验</a>
+            </div>
+        		
+        	</div>
+           
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+</body>
+<script>
+      var mySwiper = new Swiper ('.swiper-container', {
+        pagination: '.swiper-pagination',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    })
+   $(".swiper-pagination>span").css({"width":"8px ","height":"8px"});
+</script>
+</html>

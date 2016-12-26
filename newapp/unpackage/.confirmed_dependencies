@@ -1,0 +1,107 @@
+{
+  "index.html": {
+    "resources": [
+      "img/content/ban-5.jpg",
+      "img/content/t5.jpg",
+      "js/swiper.animate.min.js",
+      "img/content/3.jpg",
+      "img/content/t3.jpg",
+      "js/touch.js",
+      "img/content/2.jpg",
+      "css/index.css",
+      "img/content/ban-3.jpg",
+      "img/content/4.jpg",
+      "img/content/cur-4.jpg",
+      "js/jquery.js",
+      "img/content/ban-4.jpg",
+      "img/content/cur-1.jpg",
+      "img/content/cur-5.jpg",
+      "img/content/jx-1.jpg",
+      "img/content/jx-3.jpg",
+      "css/animate.min.css",
+      "css/swiper.css",
+      "img/content/ban-1.jpg",
+      "js/swiper.js",
+      "img/content/t1.jpg",
+      "img/content/jx-2.jpg",
+      "img/content/cur-3.jpg",
+      "img/content/1.jpg",
+      "img/logo.png",
+      "img/content/cur-2.jpg",
+      "img/content/ban-2.jpg",
+      "js/index.js",
+      "img/yindao/2.jpg",
+      "img/yindao/zi.png",
+      "img/yindao/3.jpg",
+      "css/animate.css",
+      "css/yindao.css",
+      "img/yindao/1.jpg",
+      "news.html",
+      "login.html",
+      "img/yindao/4.jpg"
+    ],
+    "refer": [
+      "news.html",
+      "login.html"
+    ]
+  },
+  "news.html": {
+    "resources": [
+      "img/content/ban-4.jpg",
+      "img/content/t5.jpg",
+      "img/content/ban-5.jpg",
+      "img/content/cur-1.jpg",
+      "img/content/3.jpg",
+      "img/content/cur-5.jpg",
+      "img/content/jx-1.jpg",
+      "img/content/jx-3.jpg",
+      "img/content/t3.jpg",
+      "css/animate.min.css",
+      "js/touch.js",
+      "img/content/ban-1.jpg",
+      "img/content/2.jpg",
+      "img/content/t1.jpg",
+      "css/index.css",
+      "img/content/jx-2.jpg",
+      "img/content/cur-3.jpg",
+      "img/content/1.jpg",
+      "img/content/ban-3.jpg",
+      "img/logo.png",
+      "img/content/4.jpg",
+      "img/content/cur-4.jpg",
+      "img/content/cur-2.jpg",
+      "js/index.js",
+      "img/content/ban-2.jpg"
+    ],
+    "refer": []
+  },
+  "login.html": {
+    "resources": [
+      "css/login.css",
+      "img/bg/true.jpg",
+      "css/animate.min.css",
+      "js/touch.js",
+      "js/index.js",
+      "css/swiper.css",
+      "font/iconfont.js",
+      "img/me.png",
+      "font/iconfont.woff",
+      "img/bg/feng.jpg",
+      "login.html",
+      "reg.html"
+    ],
+    "refer": [
+      "login.html"
+    ]
+  },
+  "reg.html": {
+    "resources": [
+      "login.html",
+      "reg.html"
+    ],
+    "refer": [
+      "login.html",
+      "reg.html"
+    ]
+  }
+}

@@ -104,7 +104,7 @@
         height:100px;
         position: absolute;
         bottom:30%;
-        right:40%;
+        right:2%;
         background: url(img/play.png) no-repeat; 
        cursor: pointer;
       }
@@ -129,11 +129,11 @@
         }
       }
       .music, .wen{
-        width:43px;
+        width:40px;
         height:40px;
         position: absolute;
         right: 5px;
-        top: 13px;
+        top:6px;
         z-index: 9999;
           cursor: pointer;
       }
@@ -144,47 +144,44 @@
           top:0;
       }
       .wen{
-          width:35px;
-          height: 30px;
+          right:50px; 
           background: url(img/wen.png) no-repeat;
-          right:60px;
-          top:17px;
       }
-      .score{
-        width:140px;
-        height:50px;
+      .jifen{
+        width:112px;
+        height:40px;
         background: url(img/score.png) no-repeat; 
         position: absolute;
-        right: 60px;
-        top: 5px;
+        left: 35px;
+        top: 50px;
         z-index: 9999;
         display: none;
-          line-height: 50px;
-      }
-      .score span{
-          display:block;
+          line-height: 40px;
+          color: #000;
+          text-align: center;
           font-size: 20px;
-          color: #fff;
-          z-index: 99999;
-          margin-left:70px;
-          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
       .life{
-          width:150px;
-          height:40px;
-          background: url(img/run.png) no-repeat;
-          position: absolute;
-          left: 5px;
-          top:15px;
-          z-index: 9999;
-          display: none;
+         width:150px;
+    height:10px;
+    display: inline-block;
+   position: absolute;
+   left: 20px;
+   top:20px;
+    background:#4B4E57;
+    display: none;
+    border-radius:5px;
+    border: 2px solid #6A6078;
       }
-      .life .heart{
-          float: left;
-          height:30px;
-          width:30px;
-          margin:5px 5px;
-      }
+      .pres{
+        width: 100%;
+    height: 100%;
+      border-radius:5px;
+       border: 2px solid #6A6078;
+    background: linear-gradient(#EA73F3, #7E22A7);
+    float:left;
+}
    .back{
        width:100px;
        height:100px;
@@ -198,8 +195,8 @@
       </style>
 </head>
 <body>
-<audio src="audio/music_bg.mp3" class="runm" loop></audio>
-<audio src="audio/over.mp3" class="hurtm"></audio>
+<audio src="audio/music_bg.mp3" class="runa" loop></audio>
+<audio src="audio/over.mp3" class="hita"></audio>
     <canvas ></canvas>
     <div class="btn">
     </div>
@@ -222,29 +219,26 @@
     <div class="music">
         <ul>
           
-            <li class="onactive"><img src="img/off.png" alt=""></li>
+             <li class="onactive"><img src="img/off.png" alt=""></li>
               <li class="active"><img src="img/onmusic.png" alt="" ></li>
         </ul>
     </div>
-    <div class="score">
-        <span>123</span>
+    <div class="jifen">
+       0
     </div>
     <div class="back"></div>
     <div class="life">
-        <div class="heart"><img src="img/heart.png" alt=""></div>
-        <div class="heart"><img src="img/heart.png" alt=""></div>
-        <div class="heart"><img src="img/heart.png" alt=""></div>
+        <div class="pres"></div>
     </div>
-    <img src="img/run1.png" alt="" class="run" hidden>
-    <img src="img/run2.png" alt="" class="run" hidden>
-    <img src="img/run3.png" alt="" class="run" hidden>
-    <img src="img/run4.png" alt="" class="run" hidden>
-    <img src="img/run5.png" alt="" class="run" hidden>
-    <img src="img/run6.png" alt="" class="run" hidden>
-    <img src="img/run7.png" alt="" class="run" hidden>
-    <img src="img/run8.png" alt="" class="run" hidden>
-    <img src="img/jump.png" alt="" class="jump" hidden>
-    <img src="img/s_hurt.png" alt="" class="hurt" hidden>
+    <img src="img/1.jpg" alt="" class="run" hidden>
+    <img src="img/2.jpg" alt="" class="run" hidden>
+    <img src="img/3.jpg" alt="" class="run" hidden>
+    <img src="img/4.jpg" alt="" class="run" hidden>
+    <img src="img/5.jpg" alt="" class="run" hidden>
+    <img src="img/6.jpg" alt="" class="run" hidden>
+    <img src="img/7.jpg" alt="" class="run" hidden>
+    <img src="img/8.jpg" alt="" class="run" hidden>
+    <img src="img/jump.jpg" alt="" class="jump" hidden>
 
    <!--障碍物-->
     <img src="img/egg.png" alt="" class="hinder" hidden>
@@ -256,5 +250,6 @@
     <img src="img/mogu.png" alt="" class="hinder" hidden>
     <img src="img/enemy.png" alt="" class="hinder" hidden>
     <img src="img/pool.png" alt="" class="hinder" hidden>
+    <img src="img/zhi.png" alt="" class="zhi" hidden>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引导页</title>  
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/yindao.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+    
+        <div class="swiper-slide" >
+                    <p class="left ani"   swiper-animate-effect="fadeInDown"    swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" style="top:3rem;right:12rem ;">南国有佳人</p>
+                    <p class="right ani"   swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" style="top:5rem;right:9rem ;">容华若桃柳</p>
+
+        </div>
+        <div class="swiper-slide" >
+             <p class="left ani"   swiper-animate-effect="fadeInDown"    swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" style="top:5rem;right:12rem ;">琢就瑶笄</p>
+                    <p class="right ani"   swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" style="top:5rem;right:9rem ;">光映鬓云斜叠</p>
+
+        </div>
+            <div class="swiper-slide" >
+                    <p class="left ani"  swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">孤舟蓑笠翁</p>
+                    <p class="right ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">独钓寒江雪</p>
+                <div class="con">
+                    <div class="login"><a href="login.html">登录</a></div>
+                    <div class="reg"><a href="">注册</a></div>
+                </div>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+</body>
+<script>
+      var mySwiper = new Swiper ('.swiper-container', {
+        pagination: '.swiper-pagination',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    })
+   $(".swiper-pagination>span").css({"width":"8px ","height":"8px","background":"#ccc"});
+</script>
+</html>

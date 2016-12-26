@@ -7,27 +7,28 @@ $(function(){
     canvas.height=cy;
     var cobj=canvas.getContext("2d");
     var run=document.querySelectorAll(".run");
-    var hurt=document.querySelector(".hurt");
     var jump=document.querySelectorAll(".jump");
-    var runm=document.querySelector(".runm");
-    var hurtm=document.querySelector(".hurtm");
-      runm.play();
-    //选项卡
+    var runa=document.querySelector(".runa");
+    var jifen=document.querySelector(".jifen")
+    var zhi=document.querySelectorAll(".zhi");
+     var runa=document.querySelector(".runa")
+    var hita=document.querySelector(".hita")
+     var lif=document.querySelector(".pres")
     var start=$(".start");
     var mask=$(".mask");
-    var hinders=$(".hinder");
+    var hinders=document.querySelectorAll(".hinder");
     //开始按钮
     var startbutton=$(".btn");
-    startbutton.one("click",function(){
-        // start.css("animation","start1 0.5s ease forwards");
-        // mask.css("animation","mask1 0.5s ease forwards");
+    startbutton.click(function(){
+        $(".start").css("display","none");
         $(".btn").css("display","none");
-        $(".score").css("display","block");
+        $(".wen").css("display","none");
+        $(".jifen").css("display","block");
         $(".life").css("display","block");
         $("canvas").css({background:"url(img/back.jpg) repeat-x",
          backgroundSize:"100% 100%"
         });
-         var gamePlay=new game(canvas,cobj,run,jump,hinders,runm,hurtm);
+         var gamePlay=new game(canvas,cobj,run,jump,hinders,jifen,zhi,lif,runa,hita);
         gamePlay.play(mask);
        
     })
@@ -46,12 +47,12 @@ $(function(){
   $(".active").click(function(){
       $(".active").hide();
       $(".onactive").show();
-      runm.pause();
+      runa.pause();
   })
     $(".onactive").click(function(){
         $(".active").show();
         $(".onactive").hide();
-        runm.play();
+        runa.play();
     })
 })
 
