@@ -213,7 +213,7 @@ game.prototype={
 
 				}
                 // 子弹碰到障碍物
-            if(hitPix(that.canvas,that.cobj,that.zidan,that.finderarr[i])){
+            if(hitPix(that.canvas,that.cobj,that.zidan,that.hinderArr[i])){
                 if(!that.hinderArr[i].flag){
                     that.hinderArr.splice(i,1);
                     that.score++;
