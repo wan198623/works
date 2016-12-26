@@ -193,7 +193,7 @@ game.prototype={
                                 that.lif.style.width=0+"%";
                         that.runa.pause();
                         that.hita.play();
-                        that.canvas.style.backgroundPositionX="0";
+                        that.canvas.style.backgroundPositionX="0px";
                         clearInterval(t1);
                          mask.css({display:"block",animation:"mask 0.5s ease forwards"});
                     };
@@ -215,7 +215,7 @@ game.prototype={
                 // 子弹碰到障碍物
             if(hitPix(that.canvas,that.cobj,that.zidan,that.hinderArr[i])){
                 if(!that.hinderArr[i].flag){
-                    that.hinderArr[i].splice(i,1)
+                    that.hinderArr[i].hide();
                     that.score++;
                     that.jifen.innerHTML=that.score;
                     // that.finderarr[i].flag=true;
