@@ -30,7 +30,7 @@ function  hinder(canvas,cobj,hinders){
 	this.cobj=cobj;
 	this.hinders=hinders;
 	this.x=this.canvas.width-20;
-	this.y=410;
+	this.y=405;
 	this.width=56;
 	this.height=40;
 	this.state=0;
@@ -193,8 +193,7 @@ game.prototype={
                                 that.lif.style.width=0+"%";
                         that.runa.pause();
                         that.hita.play();
-                        this.flag=flase;
-                        that.canvas.style.backgroundPositionX=0;
+                        that.back=0;
                          mask.css({display:"block",animation:"mask 0.5s ease forwards"});
                     };
 
