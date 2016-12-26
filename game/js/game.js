@@ -193,7 +193,7 @@ game.prototype={
                                 that.lif.style.width=0+"%";
                         that.runa.pause();
                         that.hita.play();
-                        that.back=0;
+                        that.over();
                          mask.css({display:"block",animation:"mask 0.5s ease forwards"});
                     };
 
