@@ -229,8 +229,8 @@ game.prototype={
 	  mouse:function (canvas) {
         var that=this;       
         document.querySelector("canvas").onclick=function () {
-            that.zidan.x=that.person.x+that.person.height*0.8;
-            that.zidan.y=that.person.y+that.person.height/1.8;
+            that.zidan.x=that.person.x+that.person.y/2;
+            that.zidan.y=that.person.y+that.person.height/3;
             that.zidan.speedx=10;
             that.isfire=true;
         }
