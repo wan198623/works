@@ -132,7 +132,6 @@ function game(canvas,cobj,run,jump,hinders,jifen,zhi,lif,runa,hita){
      this.num1=0;
      this.num2=0;
     this.back=0;
-     this.ts={};
     this.backspeed=6;
 	this.score=0;    
 	this.person=new person(canvas,cobj,run,jump);
@@ -149,7 +148,7 @@ game.prototype={
           this.mouse();
           this.runa.play();
 		  var that=this;	
-		setInterval(function(){
+	  var	t1=setInterval(function(){
 			that.num++;
 			  that.num1+=6;
               that.num2+=50;
@@ -194,8 +193,8 @@ game.prototype={
                                 that.lif.style.width=0+"%";
                         that.runa.pause();
                         that.hita.play();
-                        that.over();
                         that.canvas.style.backgroundPositionX="0";
+                        clearInterval(t1);
                          mask.css({display:"block",animation:"mask 0.5s ease forwards"});
                     };
 
@@ -265,12 +264,5 @@ game.prototype={
 				},50)
 			}
 		}
-	},
-
-    over:function(){
-        for(var i in this.ts){
-            clearInterval(this.ts[i]);  //关闭所有的计时器
-        }
-    
-    }
+	}
 }
