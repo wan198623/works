@@ -7,10 +7,12 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/less.css">
 	<link rel="stylesheet" href="font/iconfont.js">
+	<!-- <link rel="stylesheet" href="dist/css/bootstrap.min.css"> -->
 	<script src="js/wow.min.js"></script>
-	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-3.1.0.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/jquery.focus.js"></script>
+	<!--<script src="dist/js/bootstrap.min.js"></script>-->
 	<script>
      $(document).ready(function(){
         $("#j_Focus").Focus();
@@ -36,38 +38,38 @@
 		<div class="scroll"></div>
 	</div>
 	<div class="about floor " id="a2">
-		<div class="content">
+		<div class="content container"> 
 			<h3 class="fadeInDown wow" >关于我</h3>
-			<ul class="warp container">
-					<li>
-						<div class="img_box fadeInDown wow">
+			<ul class="warp row">
+					<li class="col-s-3 col-m-3 ">
+						<div class="img_box fadeInDown wow " >
 							<img src="img/woman.jpg" alt="" width="100%" height="100%">
 						</div>
-						<div class="word fadeInUp wow">
+						<div class="word fadeInUp wow ">
 							<img src="img/nian.png" alt="" >
 						</div>
 					</li>
-					<li >
-						<div class="img_box fadeInUp wow" style="position: absolute;bottom: 0">
+					<li class="col-s-3 col-m-3">
+						<div class="img_box fadeInUp wow  " style="position: absolute;left:0;right:0; bottom: 0">
 							<img src="img/book.jpg" alt="" width="100%" height="100%">
 						</div>
-						<div class="word fadeInDown wow">
+						<div class="word fadeInDown wow ">
 							<img src="img/jiao.png" alt="">
 						</div>
 					</li>
-					<li>
-						<div class="img_box fadeInDown wow" >
+					<li class="col-s-3 col-m-3">
+						<div class="img_box fadeInDown wow " >
 							<img src="img/pic01.jpg" alt="" width="100%" height="100%">
 						</div>
 						<div class="word fadeInUp wow">
 							<img src="img/love.png" alt="">
 						</div>
 					</li>
-					<li>
-						<div class="img_box fadeInUp wow" style="position: absolute;bottom: 0">
+					<li class="col-s-3 col-m-3">
+						<div class="img_box fadeInUp wow " style="position: absolute;left:0;right:0;bottom: 0">
 							<img src="img/pic05.jpg" alt="" width="100%" height="100%">
 						</div>
-						<div class="word fadeInDown wow" style="padding-bottom:50px">
+						<div class="word fadeInDown wow " style="padding-bottom:50px">
 							<img src="img/yu.png" alt="">
 						</div>
 					</li>
@@ -77,7 +79,7 @@
 			<div class="backz"></div>
 		</div>
 	</div>
-	<div class="skills floor" id="a3">
+	<div class="skills floor container" id="a3">
 		<div class="content">
 			<h3 class="fadeInDown wow">我的技能</h3>
 			<div class="contentwarp">
@@ -262,11 +264,11 @@
 			<div class="backz"></div>
 		</div>
 	</div>
-	<div class="experence floor" id="a4">
-		<div class="content">
+	<div class="experence floor container" id="a4">
+		<div class="content container">
 			<h3 class=" fadeInDown wow">项目经验</h3>
-			<ul class="project">
-				<li class="wow bounceInLeft">
+			<ul class="project row">
+				<li class="wow bounceInLeft col-s-3 col-m-3">
 					<div class="picture">
 								<a href="">
 									<div class="img">
@@ -279,7 +281,7 @@
 								</a>
 							</div>
 				</li>
-				<li class="wow bounceInLeft">
+				<li class="wow bounceInLeft col-s-3 col-m-3">
 					<div class="picture">
 								<a href="">
 									<div class="img">
@@ -292,7 +294,7 @@
 								</a>
 					</div>
 				</li>
-				<li class="wow bounceInLeft">
+				<li class="wow bounceInLeft col-s-3 col-m-3">
 					<div class="picture">
 								<a href="https://wan198623.github.io/feng/apple.html">
 									<div class="img">
@@ -305,7 +307,7 @@
 								</a>
 							</div>
 				</li>
-				<li class="wow bounceInLeft">
+				<li class="wow bounceInLeft col-s-3 col-m-3">
 					<div class="picture">
 								<a href="http://">
 									<div class="img">
@@ -318,7 +320,7 @@
 								</a>
 							</div>
 				</li>
-				<li class="wow bounceInRight">
+				<li class="wow bounceInRight col-s-3 col-m-3">
 					<div class="picture">
 								<a href="">
 									<div class="img">
@@ -331,7 +333,7 @@
 								</a>
 							</div>
 				</li>
-				<li class="wow bounceInRight">
+				<li class="wow bounceInRight col-s-3 col-m-3">
 					<div class="picture">
 								<a href="">
 									<div class="img">
@@ -344,7 +346,7 @@
 								</a>
 							</div>
 				</li>
-				<li class="wow bounceInRight">
+				<li class="wow bounceInRight col-s-3 col-m-3">
 					<div class="picture">
 								<a href="">
 									<div class="img">
@@ -357,7 +359,7 @@
 								</a>
 							</div>
 				</li>
-				<li class="wow bounceInRight">
+				<li class="wow bounceInRight col-s-3 col-m-3">
 					<div class="picture">
 								<a href="">
 									<div class="img">
@@ -376,9 +378,9 @@
 			      <div class="backz"></div>
 		    </div>
 	</div>
-	<div class="contact floor" id="a5">
+	<div class="contact floor container" id="a5">
 		<div class="content">
-          <h3 style="color:#E1E1E1; text-shadow:none;" class="wow fadeInDown">联系方式</h3>
+          <h3 style="color:#E1E1E1; text-shadow:none;padding-top:50px" class="wow fadeInDown">联系方式</h3>
             <ul class="adress">
 				<li class="wow bounceInLeft">
 					<div class="iconfont dizhi"></div>

@@ -124,14 +124,14 @@
 .col-l-hide {
   display: block;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width:1200px) {
   .container {
     width: 100%;
   }
   .header{
-    width: 800px;
+    width: 770px;
   }
-  #a2 .content,#a3 .content,#a4 .content,#a5 .content{
+  #a3 .content,#a5 .content{
     width:900px ;
   }
   .skills .content_right .mask .con{
@@ -146,9 +146,7 @@
   .contact .content .adress{
     top:50px;
   }
-  .experence .content .project {
-    height:800px;
-  }
+
   .about .content .warp li div{
     width: 100%;
   }
