@@ -27,42 +27,21 @@ $(function(){
  		}
  	})
 	})
-		var topss=tops+130
+		var topss=tops+80;
 		if(topss>t1&&tops<t2){
 			$(".listss").removeClass("active").eq(0).addClass("active");
-			$(".wel h2").addClass("move1");
-			$(".wel p").addClass("move2");
-		}else{
-			$(".wel h2").removeClass("move1");
-			$(".wel p").removeClass("move2");
 		}
 		if(topss>t2&&tops<t3){
 			$(".listss").removeClass("active").eq(1).addClass("active");
-			$(".about .img_box").addClass("bounceIn");
-	        $(".about .word").addClass("bounceIn");
-		}else{
-			$(".about .img_box").removeClass("bounceIn");
-			$(".about .word").removeClass("bounceIn");
 		}
 		if(topss>t3&&tops<t4){
 			$(".listss").removeClass("active").eq(2).addClass("active");
-			$(".skills .con_con").addClass("bounceIn");
-		}else{
-			$(".skills .con_con").removeClass("bounceIn");
 		}
 		if(topss>t4&&tops<t5){
 			$(".listss").removeClass("active").eq(3).addClass("active");
-			$(".experence .project li").addClass("bounceIn");
-		}else{
-			$(".experence .project li").removeClass("bounceIn");
 		}
 		if(topss>t5){
 			$(".listss").removeClass("active").eq(4).addClass("active");
-			$(".contact .content   p").addClass("bounceIn");
-			$(".contact .content .c_item").addClass("bounceIn");
-		}else{
-			$(".contact .content  p").removeClass("bounceIn");
-			$(".contact .content  .c_item").removeClass("bounceIn");
 		}
 	})
 	$(".scroll").click(function(){

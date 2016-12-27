@@ -8,6 +8,14 @@ body,html{
 	width:100%;
 	height:100%;
 }
+@font-face {
+	font-family: 'myicon';  /* project id："182487" */
+	src: url('../font/iconfont.eot');
+	src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+	url('../font/iconfont.woff') format('woff'),
+	url('../font/iconfont.ttf') format('truetype'),
+	url('../font/iconfont.svg#iconfont') format('svg');
+}
 a{
 	text-decoration: none;
 }
@@ -20,8 +28,11 @@ img{
 .banner{
 	width:100%;
 	height: 100%;
-	background: url(../img/header.jpg) no-repeat;
-	background-size:100% 100%;
+	background: url("../img/overlay.png"), url("../img/intro.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
 	z-index:99;
 	position: relative;
 	overflow: hidden;
@@ -37,12 +48,21 @@ img{
     font-size: 3em;
     font-weight: 600;
     float: left;
+	-webkit-animation: fadeInUp 300ms linear 300ms both;
+	-moz-animation: fadeInUp 300ms linear 300ms both;
+	-o-animation: fadeInUp 300ms linear 300ms both;
+	-ms-animation: fadeInUp 300ms linear 300ms both;
+	animation: fadeInUp 300ms linear 300ms both;
 }
 .header .menue{
 	float: right; 
 	line-height: 20px;
     margin-top:25px;
-    
+	-webkit-animation: fadeInUp 300ms linear 600ms both;
+	-moz-animation: fadeInUp 300ms linear 600ms both;
+	-o-animation: fadeInUp 300ms linear 600ms both;
+	-ms-animation: fadeInUp 300ms linear 600ms both;
+	animation: fadeInUp 300ms linear 600ms both;
 }
 .header .menue li{
 	margin: 0 20px;
@@ -70,7 +90,11 @@ img{
     text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
     font-size: 3.5em;
     font-family: 'Open Sans', sans-serif;
- 
+	-webkit-animation: fadeInUp 300ms linear 900ms both;
+	-moz-animation: fadeInUp 300ms linear 900ms both;
+	-o-animation: fadeInUp 300ms linear 900ms both;
+	-ms-animation: fadeInUp 300ms linear 900ms both;
+	animation: fadeInUp 300ms linear 900ms both;
 }
 
 .wel p{
@@ -79,6 +103,11 @@ img{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 29px;
+	-webkit-animation: fadeInUp 300ms linear 1200ms both;
+	-moz-animation: fadeInUp 300ms linear 1200ms both;
+	-o-animation: fadeInUp 300ms linear 1200ms both;
+	-ms-animation: fadeInUp 300ms linear 1200ms both;
+	animation: fadeInUp 300ms linear 1200ms both;
 }
 
 .scroll{
@@ -92,6 +121,11 @@ img{
     margin: 0 auto;
     bottom:20px;
     cursor: pointer;
+	-webkit-animation: fadeInDown 300ms linear 1500ms both;
+	-moz-animation: fadeInDown 300ms linear 1500ms both;
+	-o-animation: fadeInDown 300ms linear 1500ms both;
+	-ms-animation: fadeInDown 300ms linear 1500ms both;
+	animation: fadeInDown 300ms linear 1500ms both;
 }
 .about{
 	width: 100%;
@@ -488,42 +522,75 @@ img{
 }
 .contact{
 	width: 100%;
-	background:#35AFBA;
-	overflow: hidden;
-
-}
-.contact .content ul{
-	width: 100%;
-	overflow: hidden;
-
-}
-.contact .content ul li{
-	/*width: 100%;*/
-	height:150px;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
+	background-image: url("../img/overlay.png"), url("../img/promo.jpg");
+	background-size: 192px 192px, cover;
+	background-position: top left, center center;
+	color: #fff;
+	text-align: center;
+	/*padding: 6em 0 6em 0;*/
 }
-.contact .content ul li .c_item{
-	width: 100px;
-	height: 100px;
-	border-radius:50%;
+.contact .content{
+	width:1200px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.contact .content .adress{
+	width: 700px;
+	height:500px;
+	position: relative;
+	left:0;
+	right:0;
+	margin:0 auto;
+	top:100px;
+}
+.contact .content .adress li{
+	width:348px;
+	height:248px;
+	float: left;
+	background: rgba(255, 255, 255, 0.05);
+	border: solid 1px rgba(255, 255, 255, 0.25);
+	border-radius: 0.5em;
+	position: relative;
+}
+.iconfont{
+	font-family: "myicon";
+	position: absolute;
+	width:120px ;
+	height:120px;
+	left:0;
+	right:0;
+	margin: 0 auto;
+	top:30px;
+	background: #pink;
+	font-size:100px;
+}
+.dizhi:before{
+	content:"\e642";
+}
+.dianhua:before{
+	content:"\e600";
+}
+.youxiang:before{
+	content:"\e607";
+}
+.weixin:before{
+	content:"\e60d";
+	font-size:90px ;
+}
+.contact .content p{
+  text-align: center;
+	color:#fff;
+	font-family: "微软雅黑";
+	font-size: 20px;
 	position: absolute;
 	left:0;
 	right:0;
 	margin:0 auto;
-   background: url(../img/me.png) center center  no-repeat;
-   background-size: 100% 100%;
-
-}
-.contact .content ul li  p{
-	text-align: center;
-	color: #fff;
-	font-size: 20px;
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	bottom: 10px;
+	bottom:50px;
 }
 .backtop{
 	position: fixed;
@@ -535,12 +602,43 @@ img{
     cursor: pointer;
     text-indent: 100%;
     background: url(../img/top.png) center no-repeat;
-    background:;
 }
 .fix_nav{
+	width: 20px;
+	height:150px ;
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	margin:auto 0;
 	right: 5px;
+}
+.fix_nav li{
+	width:12px;
+	height:12px;
+	margin:12px 0 ;
+	border: 1px solid #000;
+	border-radius: 50%;
+	position: relative;
+	cursor: pointer;
+
+}
+.fix_nav li span{
+	display: block;
+	width:100px;
+	height: 100%;
+	position: absolute;
+	right:13px;
+	top:0;
+	text-align:right;
+	display: none;
+	line-height: 15px;
+}
+.fix_nav li:hover span{
+	display: block;
+}
+.fix_nav .active{
+	width:13px;
+	height:13px;
+	background: #000;
+	border: 0;
 }
